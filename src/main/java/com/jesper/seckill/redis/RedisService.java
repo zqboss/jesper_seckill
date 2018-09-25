@@ -167,7 +167,7 @@ public class RedisService {
      */
     private Jedis getResource() {
         Jedis jedis = jedisPool.getResource();
-        jedis.auth(REDISPASSWORD);
+//        jedis.auth(REDISPASSWORD);
         return jedis;
     }
 }

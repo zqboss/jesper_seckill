@@ -67,6 +67,8 @@ CREATE TABLE `sk_order` (
   `user_id` bigint(20) DEFAULT NULL,
   `order_id` bigint(20) DEFAULT NULL,
   `goods_id` bigint(20) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL COMMENT '秒杀订单时间',
+  `update_time` datetime DEFAULT NULL COMMENT '秒杀订单更新时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `u_uid_gid` (`user_id`,`goods_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
@@ -74,7 +76,7 @@ CREATE TABLE `sk_order` (
 -- ----------------------------
 -- Records of sk_order
 -- ----------------------------
-INSERT INTO `sk_order` VALUES ('10', '18718185897', '1', '1',new Date(),new Date());
+INSERT INTO `sk_order` VALUES ('10','18718185897', '1', '1','2018-09-25 22:56:10','2018-09-25 22:56:10');
 
 -- ----------------------------
 -- Table structure for sk_order_info
